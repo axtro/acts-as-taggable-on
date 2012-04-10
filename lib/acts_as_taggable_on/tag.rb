@@ -10,7 +10,7 @@ class Tag < ActiveRecord::Base
   ### VALIDATIONS:
 
   validates_presence_of :name
-  validates_uniqueness_of :name
+  validates_uniqueness_of :name, :scope => :store_id
 
   ### SCOPES:
 
